@@ -14,8 +14,7 @@ def main():
         }
         quote_key = random.choice(list(disco_quotes.keys()))
         return disco_quotes[quote_key]
-    
-    if __name__ == "__main__":
-        random_quote = get_disco_quotes()
-        print(random_quote)
+    random_quote = get_disco_quotes()
+    print(random_quote)
 
+main()
