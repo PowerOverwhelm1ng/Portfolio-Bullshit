@@ -30,7 +30,30 @@ def generate_room():
             return door_types[key]
 
     # Default case if roll is outside the defined ranges
-    return {'material': 'Unknown', 'locked': False, 'stuck': False, 'trapped': False}
-room = generate_room()
-print(room)
+    room_chamber_size = {
+        range(1, 3): 'Square, 8 x 8 squares',
+        range(3, 5): 'Square, 10 x 10 squares',
+        range(5, 7): 'Rectangle, 6 x 8 squares',
+        range(7, 9): 'Rectangle, 8 x 10 squares',
+        range(9, 11): 'Rectangle, 10 x 16 squares',
+        range(11, 13): 'Octagon, 8 x 8 squares',
+        range(13, 15): 'Octagon, 8 x 12 squares',
+        range(15, 17): 'Octagon, 12 x 12 squares',
+        range(17, 19): 'Irregular, roughly 8 x 10 squares',
+        range(19, 21): 'Irregular, roughly 10 x 16 squares'
+    }
 
+def get_chamber_size():
+    roll = random.randint(1, 20)
+    for key in room_chamber_size.keys():
+        if roll in key:
+            return room_chamber_size[key]
+
+        # Default case if roll is outside the defined ranges
+        return 'Unknown'
+    room = {
+    'door': door_types(),
+'chamber_size': get_chamber_size()
+    }
+
+    return room
