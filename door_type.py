@@ -36,33 +36,36 @@ room_chamber_size = {
         range(19, 21): 'Irregular, roughly 10 x 16 squares'
     }
 
+
+
+
+
+
+def get_door():
+    roll = random.randint(1, 100)
+    for key in door_types.keys():
+        if roll in key:
+            return door_types[key]
+
 def get_chamber_size():
     roll = random.randint(1, 20)
     for key in room_chamber_size.keys():
         if roll in key:
             return room_chamber_size[key]
 
-        # Default case if roll is outside the defined ranges
-
-
-def generate_room():
-    roll = random.randint(1, 100)
-    for key in door_types.keys():
-        if roll in key:
-            return door_types[key]
-
-
     
         # Default case if roll is outside the defined ranges
     default_door = {'material': 'Unknown', 'quality': 'Unknown', 'locked': False, 'stuck': False, 'trapped': False}
-    room = {
+    door = {
             'door': 'Unknown',
             'chamber_size': get_chamber_size()
         }
-    return room
+    return door
 
 def main():
-    room = generate_room()
-    print(room)
+    door = get_door()
+  
+    print(door)
+
 
 main()
