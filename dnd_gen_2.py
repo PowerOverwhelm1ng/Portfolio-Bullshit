@@ -44,3 +44,9 @@ class Generator:
 
             if (x < (current_room[0] + current_room[2]) and
                 current_room[0] < (x + w) and
+                y < (current_room[1] + current_room[3]) and
+                current_room[1] < (y + h)):
+
+                return True
+
+        return False
