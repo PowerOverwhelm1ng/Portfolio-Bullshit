@@ -450,12 +450,3 @@ generate_button.pack()
 # Start the GUI event loop
 
 window.mainloop()
-# print("Item from table a",item_a)
-# print("Item from Table b:", item_b)
-# print("Item from Table c:", item_c)
-# print("Item from Table d:", item_d)
-# print("Item from Table e:", item_e)
-# print("Item from Table f:", item_f)
-# print("Item from Table g:", item_g)
-# print("Item from Table h:", item_h)
-# print("Item from Table i:", item_i)
