@@ -1,0 +1,5 @@
+if orientation == 270:
+    #SETUP THE TOUCH SCREEN
+    ts = adafruit_touch_screen.Touchscreen(
+        
+    )
