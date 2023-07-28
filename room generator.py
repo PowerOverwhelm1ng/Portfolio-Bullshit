@@ -21,11 +21,10 @@ def generate_room():
             (71, 71): {'material': 'Stone', 'locked': False, 'stuck': False, 'trapped': False},
             (72, 72): {'material': 'Stone', 'locked': False
             }
+    }
 
-roll = random.randint(1, 100)
-    for key in door_types.keys():
-        if roll in key:
-            return door_types[key]
-
-    # Default case if roll is outside the defined ranges
-    return {'material': 'Unknown', 'locked': False, 'stuck': False, 'trapped': False}
+def get_door_type():
+    roll = random.randint(1, 100)
+    for key in room_types.keys():
+        if key[0] <= roll <= key[1]:
+            return room_types[key]
