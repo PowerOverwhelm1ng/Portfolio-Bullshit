@@ -1,0 +1,15 @@
+task_manager_project_tom/task_manager_app/venv_manager_project_tom/Lib/site-packages/django/conf/locale/lb/LC_MESSAGES/django.po
+# Ignore JetBrains IDE configuration files
+.idea/
+*.exe
+*.dll
+
+# Ignore system-specific files
+Thumbs.db
+.DS_Store
+.vscode/
+# Ignore temporary and build files
+*.log
+*.tmp
+/build/
+/dist/
