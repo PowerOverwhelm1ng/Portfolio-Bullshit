@@ -8,6 +8,8 @@ task_manager_project_tom/task_manager_app/venv_manager_project_tom/Lib/site-pack
 Thumbs.db
 .DS_Store
 .vscode/
+README.md
+task_manager_project_tom/
 # Ignore temporary and build files
 *.log
 *.tmp
